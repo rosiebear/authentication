@@ -1,0 +1,16 @@
+<form name="register" ng-submit="submit()" class="form-signin" novalidate>
+	<h1 class="form-signin-heading text-muted">Sign In</h1>
+	<input type="email" ng-model="email" name="email" class="form-control" placeholder="Email address" required>
+	<p class="help-block" ng-show="register.email.$dirty && register.email.$invalid">
+		Please enter a valid email address
+	</p>
+	<input type="password" ng-model="password" name="password" class="form-control" placeholder="Password" required>
+	<input type="password" ng-model="password_confirm" name="password_confirm"  class="form-control" placeholder="Confirm Password" required validate-equals="password">
+	 <p class="help-block" ng-show="register.password_confirm.$dirty && register.password_confirm.$invalid">
+	 	please match the passwords
+	 </p>
+	<button ng-disabled="register.$invalid" class="btn btn-lg btn-primary btn-block" type="submit">
+		Sign In
+	</button>
+
+</form>
